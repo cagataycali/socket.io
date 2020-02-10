@@ -16,7 +16,9 @@
     "url": "git://github.com/Automattic/socket.io"
   },
   "scripts": {
-    "test": "mocha --reporter dot --slow 200ms --bail"
+    "test": "mocha --reporter dot --slow 200ms --bail",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "engine.io": "automattic/engine.io#ddc64a",
@@ -24,7 +26,8 @@
     "socket.io-client": "automattic/socket.io-client#210d65",
     "socket.io-adapter": "automattic/socket.io-adapter#ae79d8",
     "has-binary": "0.1.6",
-    "debug": "2.6.9"
+    "debug": "2.6.9",
+    "snyk": "^1.290.2"
   },
   "devDependencies": {
     "mocha": "1.16.2",
@@ -50,5 +53,6 @@
       "name": "Einar Otto Stangvik",
       "email": "einaros@gmail.com"
     }
-  ]
+  ],
+  "snyk": true
 }
